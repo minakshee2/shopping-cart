@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ShoppingCart
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
@@ -34,3 +35,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
    @import "~font-awesome/css/font-awesome.min.css";
 
   OR configure inside angular.json architect\build\styles "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+  test
