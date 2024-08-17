@@ -1,0 +1,85 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 10px;
+  justify-content: flex-start;
+}
+
+.content-count {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  vertical-align: top;
+  width: 100px;
+}
+
+.num {
+  height: 50%;
+  width: 39%;
+  border: none;
+  font-size: 16px;
+}
+
+.i-minus {
+  float: left;
+  width: 30px;
+  line-height: inherit !important;
+  text-align: center;
+}
+
+.i-plus {
+  float: right;
+  width: 30px;
+  line-height: inherit !important;
+  text-align: center;
+}
+
+.count-span {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+}
+
+.right {
+  float: right;
+}
+
+button {
+  width: 80px;
+  cursor: pointer !important;
+}
+
+.wrapper {
+  border: 2px #dcd3d3 solid;
+  width: 15vw;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  border-radius: 15px;
+}
+
+.plusminus {
+  height: 70%;
+  width: 20%;
+  background: white;
+  border: none;
+  font-size: 40px;
+  color: #5f5fce;
+}
+
+i {
+  cursor: pointer;
+}
+
+.num {
+  height: 100%;
+  width: 39%;
+  border: none;
+  font-size: 30px;
+}

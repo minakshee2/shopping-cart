@@ -1,0 +1,81 @@
+<div>
+  <label for="Category" class="pb-2 pr-4">Category</label>
+  <select name="category" id="category" [(ngModel)]="selectedCategory" class="col-2 m-2">
+    <option *ngFor="let category of productCategory" [value]="category.id">{{category.name}}</option>
+  </select>
+</div>
+
+<div>
+  {{ getProducts(selectedCategory) }}
+</div>
+
+<div class="content">
+  <div class="card col-3 m-3" *ngFor="let item of selectedCatList; let index=index;" [attr.value]="item.id">
+    <div class="m-2">
+      <img src="{{ getImage(item.categoryId,item.id)  }}" style="width: 300px;height: 200px;">
+      <div class="card-content right">
+        <label for="qty">Qty: {{ getQty(item.categoryId,item.id) }}</label>
+        {{ getPrice(item.categoryId,item.id) | currency }}
+        {{ getSelectedQty(item.categoryId,item.id) }}
+        <button *ngIf="isAddToCartActive === false " type="button" class="btn btn-primary mt-2 rounded-pill"
+          (click)="addToCart(item)">
+          <span>Add</span>
+        </button>
+        <div class="content-count border mt-2" *ngIf="isAddToCartActive && qtySelected > 0">
+          <i class="fa fa-minus bg-primary i-minus" (click)="removeFromCart(item)"></i>
+          <!-- <input class="ps-4 pe-4 num" type="number" [(ngModel)]="count" /> -->
+          <span class="count-span">{{qtySelected}}</span>
+          <i class="fa fa-plus bg-primary i-plus" (click)="addToCart(item)"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="content">
+  <div class="card col-3 m-3" *ngFor="let item of selectedCatList; let index=index;" [attr.value]="item.id">
+    <div class="m-2">
+      <img src="{{ getImage(item.categoryId,item.id)  }}" style="width: 300px;height: 200px;">
+      <div class="card-content right">
+        <label for="qty">Qty: {{ getQty(item.categoryId,item.id) }}</label>
+        {{ getPrice(item.categoryId,item.id) | currency }}
+        <button *ngIf="index !== clickedButtonIndex || count === 0" type="button"
+          class="btn btn-primary mt-2 rounded-pill" (click)="addToCartActive(index)">
+          <span>Add</span>
+        </button>
+        <div class="content-count border mt-2" *ngIf="clickedButtonIndex === index && count !== 0">
+          <i class="fa fa-minus bg-primary i-minus" (click)="removeFromCart()"></i>
+          
+          <span class="count-span">{{count}}</span>
+          <i class="fa fa-plus bg-primary i-plus" (click)="addToCart(item)"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- ============================================================================== -->
+
+
+<!-- <div class="wrapper" *ngIf="isAddToCartActive === true">
+  <button class="plusminus" (click)="addToCart()">-</button>
+  <input type="number" class="num" qty="0" [(ngModel)]="qty" />
+  <button class="plusminus" (click)="removeFromCart()">+</button>
+</div> -->
+
+
+<!-- 
+<div class="card col-12" *ngFor="let item of selectedCatList" [value]="item.id">
+  <mat-card class="card col-3" *ngIF="product.categoryId == selectedCategory">
+    <mat-card-content>
+      <br><img  src="{{ getImage(selectedCategory,product.id)  }}" style="width: 300px;height: 200px;">
+      <div class="text-right">
+        <br><label for="qty">Qty:</label>{{ getQty(selectedCategory,item.id) }}
+        <br>{{ getPrice(selectedCategory,item.id) | currency: 'CAD' }}
+        <br><button  type="button" class="btn btn-primary">+Add</button>
+      </div>    
+    </mat-card-content> 
+  </mat-card>
+</div> -->

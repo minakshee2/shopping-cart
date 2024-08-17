@@ -1,0 +1,94 @@
+.trash {
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.edit {
+  color: blue;
+  font-size: 18px;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+.no-row {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#cardheader {
+  font-weight: bold;
+}
+
+#cardbody {
+  max-height: 500px;
+  overflow: auto; /*it add scrollbar only when needed, content that is too big to fit into an area*/
+}
+
+.mat-table-sticky {
+  top: 80px !important;
+}
+
+.header-row {
+  background-color: skyblue;
+}
+
+.plusminus {
+  height: 70%;
+  width: 20%;
+  background: white;
+  border: none;
+  font-size: 40px;
+  color: #5f5fce;
+}
+
+.i-minus {
+  float: left;
+  width: 30px;
+  line-height: inherit !important;
+  text-align: center;
+}
+
+.i-plus {
+  float: right;
+  width: 30px;
+  line-height: inherit !important;
+  text-align: center;
+}
+
+.num {
+  height: 50%;
+  width: 39%;
+  border: none;
+  font-size: 16px;
+}
+
+.count-span {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.content-count {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  vertical-align: top;
+  width: 100px;
+}
+
+.colr {
+  background-color: yellowgreen;
+}
+
+.cart {
+  width: 70%;
+}
+
+.checkout {
+  width: 100%;
+  padding-left: 70%;
+  padding-top: 0%;
+}

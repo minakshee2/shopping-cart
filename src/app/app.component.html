@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()" id="menuIcon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span id="menuTitle" class="p-2">Shopping Cart</span>
+    <span class="cart-count">
+        <i class="fa fa-shopping-cart" routerLink="/viewcart"></i>
+        <em>{{ getCartTotal() }}</em>
+    </span>
+</mat-toolbar>
+
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav [fixedInViewport]="true" [fixedTopGap]="60" mode="side">
+        <div class="side-nav-items">
+            <div>
+                <a mat-button routerLink="/" class="side-menu-item"><mat-icon>home</mat-icon>Home</a>
+            </div>
+
+            <div>
+                <a mat-button routerLink="/categories"
+                    class="side-menu-item"><mat-icon>bakery_dining</mat-icon>Categories</a>
+            </div>
+
+            <div>
+                <a mat-button routerLink="/register" class="side-menu-item"><mat-icon>person_add</mat-icon>Register</a>
+            </div>
+        </div>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div class="main-content">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
